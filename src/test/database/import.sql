@@ -1,0 +1,4 @@
+
+delete from "public"."member" where id < 99999;
+insert into "public"."member" (id, name, email, phone_number) values (0, 'Jordan Ellis', 'JORELL@JE-Designs.com', '+447666444000'), (1, 'Adam Sydney', 'ADASYD@JE-Designs.com', '+447666444001'), (2, 'Sophie Marsh', 'SOPMAR@JE-Designs.com', '+447666444002'), (3, 'Scott Parker', 'SCOPAR@JE-Designs.com', '+447666444003'), (4, 'Holly Macintosh', 'HOLMAC@JE-Designs.com', '+447666444004'), (5, 'Jade Pence', 'JADPEN@JE-Designs.com', '+447666444005'), (6, 'Bill Ditt', 'BILDIT@JE-Designs.com', '+447666444006'), (7, 'Phil Ditt', 'PHIDIT@JE-Designs.com', '+447666444007'), (8, 'Jake Ditt', 'JAKDIT@JE-Designs.com', '+447666444008'), (9, 'Jody Smith', 'JODSMI@JE-Designs.com', '+447666444009'), (10, 'Muhammed Darli', 'MUHDAR@JE-Designs.com', '+447666444010'), (11, 'Tim Sprinks', 'TIMSPR@JE-Designs.com', '+447666444011');
+select * from "public"."member";

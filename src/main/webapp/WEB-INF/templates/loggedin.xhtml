@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+<h:head>
+    <title>MySchedule</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <h:outputStylesheet name="css/access.css" />
+</h:head>
+<h:body>
+
+
+<div id="logo">
+	<a href="index.jsf" onclick="alert('You have successfully logged out!')">
+		<img src="../myschedule/resources/gfx/jed_logo.png" alt="Jordan Ellis Designs" width="235px;" height="73px;"></img>
+	</a>
+</div>
+
+<div id="menu">
+
+</div>
+
+<div id="time">
+	<p id="time"></p>
+    	<script>
+ 		//<![CDATA[
+			var time = new Date();
+			var hour = time.getHours();
+			if (hour < 10) {hour = "0"+hour;}
+			var minutes = time.getMinutes();
+			if (minutes < 10) {minutes = "0"+minutes;}
+			document.getElementById("time").innerHTML = hour+":"+minutes;
+		//]]>
+	</script>
+</div>
+
+<div id="date">
+	<p id="date"></p>
+    	<script>
+ 		//<![CDATA[
+			var date = new Date();
+			var day = date.getDate();
+			if (day < 10) {day = "0"+day;}
+			var month = date.getMonth();
+			var year = date.getFullYear();
+			var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+			var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+			document.getElementById("date").innerHTML = days[date.getDay()]+", "+day+" "+months[date.getMonth()]+" "+year;
+	  //]]>
+	</script>
+</div>
+
+<div id="credentials">
+
+
+	<a href ="index.jsf" onclick="alert('You have successfully logged out!')">
+		<img src="../myschedule/resources/gfx/loggedout.png" alt="Login" width="125px;" height="30px;"></img>
+	</a>
+ </div>
+
+<div id="body">
+<table>
+	<tr>
+        <th><em>Week 19</em> <br></br> 08-May-17</th>
+        <th>Position</th>
+        		<th>Monday</th>
+    		    <th>Tuesday</th>
+        		<th>Wednesday</th>
+        		<th>Thursday</th>
+		        <th>Friday</th>
+		        <th>Saturday</th>
+		        <th>Sunday</th>
+    </tr>
+    <tr>
+        <th>07:00-15:00</th>
+		<td>Morning</td>
+       		    <td id="adsy">Adam Sydney</td>
+            	<td id="adsy">Adam Sydney</td>
+            	<td id="josm">Jody Smith</td>
+            	<td id="josm">Jody Smith</td>
+            	<td id="josm">Jody Smith</td>
+            	<td id="josm">Jody Smith</td>
+            	<td id="josm">Jody Smith</td>
+    </tr>
+    <tr>
+        <th>07:00-15:00</th>
+        <td>Morning</td>
+        	    <td id="soma">Sophie Marsh</td>
+	            <td id="soma">Sophie Marsh</td>
+            	<td id="soma">Sophie Marsh</td>
+            	<td id="soma">Sophie Marsh</td>
+            	<td id="soma">Sophie Marsh</td>
+            	<td id="adsy">Adam Sydney</td>
+            	<td id="adsy">Adam Sydney</td>
+    </tr>
+    <tr>
+        <th>12:00-20:00</th>
+        <td>Afternoon</td>
+            	<td id="scpa">Scott Parker</td>
+            	<td id="scpa">Scott Parker</td>
+            	<td id="adsy">Adam Sydney</td>
+            	<td id="scpa">Scott Parker</td>
+            	<td id="scpa">Scott Parker</td>
+            	<td id="scpa">Scott Parker</td>
+            	<td id="muda">Muhammed Darli</td>
+    </tr>
+    <tr>
+        <th>12:00-20:00</th>
+        <td>Afternoon</td>
+        	    <td id="homa">Holly Macintosh</td>
+	            <td id="homa">Holly Macintosh</td>
+            	<td id="jape">Jade Pence</td>
+            	<td id="homa">Holly Macintosh</td>
+            	<td id="joel">Jordan Ellis</td>
+            	<td id="homa">Holly Macintosh</td>
+            	<td id="tisp">Tim Sprinks</td>
+    </tr>
+									<tr><th></th></tr>
+    <tr>
+        <th>12:00-20:00</th>
+        <td><em>Admin</em></td>
+            	<td id="joel">Jordan Ellis</td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+    </tr>
+        <tr>
+        <th>12:00-20:00</th>
+        <td><em>Validation</em></td>
+            	<td></td>
+            	<td id="joel">Jordan Ellis</td>
+            	<td></td>
+            	<td></td>
+    </tr>
+        <tr>
+        <th>12:00-20:00</th>
+        <td><em>Maintenance</em></td>
+       	     	<td></td>
+        	    <td></td>
+            	<td id="joel">Jordan Ellis</td>
+            	<td></td>
+    </tr>
+        <tr>
+        <th>12:00-20:00</th>
+        <td><em>Scheduling</em></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+	            <td id="joel">Jordan Ellis</td>
+    </tr>
+									<tr><th></th></tr>
+    <tr>
+        <th>14:00-22:00</th>
+        <td>Evening</td>
+        	    <td id="tisp">Tim Sprinks</td>
+     	        <td id="tisp">Tim Sprinks</td>
+	            <td id="tisp">Tim Sprinks</td>
+            	<td id="jape">Jade Pence</td>
+            	<td id="jape">Jade Pence</td>
+            	<td id="muda">Muhammed Darli</td>
+            	<td id="jape">Jade Pence</td>
+    </tr>
+    <tr>
+        <th>14:00-22:00</th>
+        <td>Evening</td>
+        	    <td id="bidi">Bill Ditt</td>
+            	<td id="bidi">Bill Ditt</td>
+	            <td id="bidi">Bill Ditt</td>
+            	<td id="bidi">Bill Ditt</td>
+            	<td id="bidi">Bill Ditt</td>
+            	<td id="tisp">Tim Sprinks</td>
+            	<td id="homa">Holly Macintosh</td>
+    </tr>
+    <tr>
+        <th>16:00-00:00</th>
+        <td>Night</td>
+	            <td id="muda">Muhammed Darli</td>
+            	<td id="muda">Muhammed Darli</td>
+            	<td id="muda">Muhammed Darli</td>
+            	<td id="phdi">Phil Ditt</td>
+            	<td id="phdi">Phil Ditt</td>
+            	<td id="phdi">Phil Ditt</td>
+            	<td id="phdi">Phil Ditt</td>
+    </tr>
+    <tr>
+        <th>16:00-00:00</th>
+        <td>Night</td>
+          	  	<td id="phdi">Phil Ditt</td>
+	            <td id="jape">Jade Pence</td>
+            	<td id="jadi">Jake Ditt</td>
+            	<td id="jadi">Jake Ditt</td>
+            	<td id="jadi">Jake Ditt</td>
+            	<td id="jadi">Jake Ditt</td>
+            	<td id="jadi">Jake Ditt</td>
+    </tr>
+  </table>
+  
+  
+
+<div id="list">
+			<ul>
+			 <li><p id="adsy">Adam Sydney</p></li>
+			 <li><p id="bidi">Bill Ditt</p></li>
+			 <li><p id="homa">Holly Macintosh</p></li>
+			 <li><p id="jape">Jade Pence</p></li>
+			 <li><p id="jadi">Jake Ditt</p></li>
+			 <li><p id="josm">Jody Smith</p></li>
+ 			 <li><p id="joel">Jordan Ellis</p></li>
+			 <li><p id="muda">Muhammed Darli</p></li>
+ 			 <li><p id="phdi">Phil Ditt</p></li>
+			 <li><p id="scpa">Scott Parker</p></li>
+			 <li><p id="soma">Sophie Marsh</p></li>
+			 <li><p id="tisp">Tim Sprinks</p></li>
+			</ul>
+
+
+
+
+	</div>
+</div>
+
+<div id="footer">
+	&copy;2017 &ensp; Jordan Ellis Designs
+</div>
+
+<div id="footerV">
+	v001.0.0
+</div>
+
+</h:body>
+</html>

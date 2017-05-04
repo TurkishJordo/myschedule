@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+<h:head>
+    <title>MySchedule</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <h:outputStylesheet name="css/index.css" />
+    <script src="../myschedule/login.js"></script>
+</h:head>
+<h:body>
+
+
+<div id="logo">
+	<a href="index.jsf">
+		<img src="../myschedule/resources/gfx/jed_logo.png" alt="Jordan Ellis Designs" width="235px;" height="73px;"></img>
+	</a>
+</div>
+
+<div id="menu">
+
+</div>
+
+<div id="time">
+	<p id="time"></p>
+    	<script>
+ 		//<![CDATA[
+			var time = new Date();
+			var hour = time.getHours();
+			if (hour < 10) {hour = "0"+hour;}
+			var minutes = time.getMinutes();
+			if (minutes < 10) {minutes = "0"+minutes;}
+			document.getElementById("time").innerHTML = hour+":"+minutes;
+		//]]>
+	</script>
+</div>
+
+<div id="date">
+	<p id="date"></p>
+    	<script>
+ 		//<![CDATA[
+			var date = new Date();
+			var day = date.getDate();
+			if (day < 10) {day = "0"+day;}
+			var month = date.getMonth();
+			var year = date.getFullYear();
+			var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+			var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+			document.getElementById("date").innerHTML = days[date.getDay()]+", "+day+" "+months[date.getMonth()]+" "+year;
+	  //]]>
+	</script>
+</div>
+
+<div id="credentials">
+	<img src="../myschedule/resources/gfx/login.png" alt="Login" width="120px;" height="30px;" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"></img>
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../myschedule/resources/gfx/img_avatar2.png" alt="Avatar" class="avatar"></img>
+    </div>
+
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter username ( aidan )" name="username" id="username"></input>
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter password ( delaney )" name="password" id="password"></input>
+      <input type="button" value="Login" id="submit" onclick="validate()"/>
+    </div>
+  </form>
+</div>
+  <script>
+	var modal = document.getElementById('id01');
+
+	window.onclick = function(event) {
+    	if (event.target == modal) {
+        	modal.style.display = "none";
+    	}
+	}
+  </script>
+ </div>
+
+<div id="body">
+  <h1>Welcome to MySchedule!</h1>
+	<p>Viewing your schedule and any FAQs you may have:</p>
+		<p><i>&emsp; &bull; Details about your credentials can be obtained through your system administrator.</i></p>
+		<p><i>&emsp; &bull; To log in to MySchedule, please click the 'login' button</i> (<img src="../myschedule/resources/gfx/loginTP.png" alt="Login" height="17px;"></img>).</p>
+		<p><i>&emsp; &bull; When prompted, enter your username and password and click 'Submit'.</i></p>
+	  <p><br></br></p>
+	<p>If you have any concerns regarding your shifts, please speak to your store manager at your earliest convenience.</p>
+</div>
+
+<div id="footer">
+	&copy;2017 &ensp; Jordan Ellis Designs
+</div>
+
+<div id="footerV">
+	v001.0.0
+</div>
+
+</h:body>
+</html>
